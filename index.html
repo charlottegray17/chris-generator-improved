@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Messina Generator</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="javascript" href="main.js">
+  </head>
+
+  <body id="body">
+    <header>
+      <h1>Messina Film/TV Generator</h1>
+      <div class="header-intro">
+        <h2>So you’d like to see a little Messina would ya?</h2>
+        <p>This Long Island native is a charming and diverse actor with the filmography to match. In case you’d like a little suggestion of where to start, pick from the options below for a tailored suggestion.
+  </p>
+      </div>
+    </header>
+
+    <main>
+      <form>
+
+        <h3 id="option-header">Indie or Studio?</h3>
+        <input type="radio" id="indie" name="project-type" value="indie">
+        <label for="indie">Indie</label>
+        <input type="radio" id="studio" name="project-type" value="studio">
+        <label for="studio">Studio</label>
+
+        <h3 id="option-header">Pick a genre</h3>
+        <input type="checkbox" id="romance" name="genre" value="romance">
+        <label for="romance">Romance</label>
+        <input type="checkbox" id="drama" name="genre" value="drama">
+        <label for="drama">Drama</label>
+        <input type="checkbox" id="angst" name="genre" value="angst">
+        <label for="angst">Angst</label>
+        <input type="checkbox" id="comedy" name="genre" value="comedy">
+        <label for="comedy">Comedy</label>
+
+        <h3 id="option-header">Film or TV?</h3>
+        <input type="radio" id="film" name="project-format" value="film">
+        <label for="film">Film</label>
+        <input type="radio" id="tv" name="project-format" value="tv">
+        <label for="tv">TV</label>
+
+        <h3 id="option-header">Moody Chris or Jolly Chris?</h3>
+        <input type="radio" id="moody" name="chris-version" value="moody">
+        <label for="moody">Moody Chris</label>
+        <input type="radio" id="jolly" name="chris-version" value="jolly">
+        <label for="jolly">Jolly Chris</label>
+
+        <h3 id="option-header">Tame or Steamy?</h3>
+        <input type="radio" id="tame" name="pg-rating" value="tame">
+        <label for="tame">Tame</label>
+        <input type="radio" id="steamy" name="pg-rating" value="steamy">
+        <label for="steamy">Steamy</label>
+
+        <div class="">
+          <button type="button" onclick="mindy();startAgain();" name="button">Submit</button>
+          <!--<button type="button" onclick="options();mindy();blame();julieJulia();sharpObjects();startAgain();" name="button">Submit</button>-->
+        </div>
+
+        <!--<button type="button" onclick="options(); answer1(); answer2(); answer3(); answer4(); answer5(); reveal();" name="button">Submit</button>-->
+
+
+        <div id="result">
+          <div id="answer"></div>
+          <img id="image" src="" alt="">
+          <div id="text"></div>
+        </div>
+
+        <div id="start-over" style="display:none;">
+          <h4 id="start-again">If you're not a fan of your Messina recommendation (doubtful), please click below to start again. </h4>
+          <a href="index.html"><button id="repeat" type="button" name="button">Start Over</button></a>
+        </div>
+
+      </form>
+
+      <!--<button onclick="showMindy(); calc();" type="button" name="button">Show Mindy</button>
+
+      <div id="form-results">
+        <h2 id="watch-title" class="watch-title">You should watch...</h2>
+        <h3 id="user-result"></h3>
+        <img id="image-result" src="" alt="messina-screenshot">
+        <h3 id="suggestion-description"></h3>
+        <div class="section-divider">
+          <h4 id="start-again">If you're not a fan of your Messina recommendation (doubtful), please click below to start again. </h4>
+          <a id="start-over-button" href="index.html"><button type="button" name="button" style="none">Start Over</button></a>
+        </div>
+      </div>-->
+    </main>
+
+
+
+    <script>
+
+    /*function mindyProject() {
+       title : "the Mindy Project";
+       image : 'img/the-mindy-project.jpg';
+       description : "an adorable comedy aout two lost souls finding one another";
+    }
+
+    function options() {
+      if (document.querySelector("#studio" + "#comedy" + "#romance" + "#tv" + "#jolly" + "#tame").checked {
+        title = "the Mindy Project";
+        image = 'img/the-mindy-project.jpg';
+        description = "an adorable comedy aout two lost souls finding one another";
+      }
+      document.querySelector("#answer").innerHTML = title;
+      document.querySelector("#image").src = image;
+      document.querySelector("#text").innerHTML = description;
+    }*/
+
+    function mindy() {  //this one gives the result I want
+      var title;
+      var image;
+      var description;
+      if (document.querySelector("#studio").checked &&
+          document.querySelector("#comedy").checked &&
+          document.querySelector("#romance").checked &&
+          document.querySelector("#tv").checked &&
+          document.querySelector("#jolly").checked &&
+          document.querySelector("#tame").checked) {
+        title = "the Mindy Project";
+        image = 'img/the-mindy-project.jpg';
+        description = "an adorable comedy aout two lost souls finding one another";
+      } else if
+         (document.querySelector("#indie").checked &&
+          document.querySelector("#drama").checked &&
+          document.querySelector("#romance").checked &&
+          document.querySelector("#film").checked &&
+          document.querySelector("#moody").checked &&
+          document.querySelector("#steamy").checked) {
+          title = "Blame";
+          image = 'img/blame.jpg';
+          description = "a high school retelling of the crucible which will most definitiely leave you hot for teacher";
+      } else if
+        (document.querySelector("#studio").checked &&
+         document.querySelector("#drama").checked &&
+         document.querySelector("#comedy").checked &&
+         document.querySelector("#film").checked &&
+         document.querySelector("#jolly").checked &&
+         document.querySelector("#tame").checked) {
+         title = "Julie & Julia";
+         image = 'img/jule-and-julia.jpg';
+         description = "Salivate over a smorgosboard of French cuisine, and Chris being an adorable supportive boyfriend";
+     } else if
+        (document.querySelector("#studio").checked &&
+         document.querySelector("#drama").checked &&
+         document.querySelector("#angst").checked &&
+         document.querySelector("#tv").checked &&
+         document.querySelector("#jolly").checked &&
+         document.querySelector("#steamy").checked) {
+         title = "Sharp Objects";
+         image = 'img/sharp-objects.jpg';
+         description = "Be frustrated for several episodes in the south, but enjoy cheeky detective Chris getting far too involved with suspect in the name of the case";
+    } else {
+        title = "Away We Go";
+        image = 'img/away-we-go.jpg';
+        description = "a high school retelling of the crucible which will most definitiely leave you hot for teacher";
+      }
+      document.querySelector("#answer").innerHTML = title;
+      document.querySelector("#image").src = image;
+      document.querySelector("#text").innerHTML = description;
+    }
+
+    /*function mindy() {  //this one gives the result I want
+      var title;
+      var image;
+      var description;
+      if (document.querySelector("#studio").checked +
+          document.querySelector("#comedy").checked +
+          document.querySelector("#romance").checked +
+          document.querySelector("#tv").checked +
+          document.querySelector("#jolly").checked +
+          document.querySelector("#tame").checked) {
+        title = "the Mindy Project";
+        image = 'img/the-mindy-project.jpg';
+        description = "an adorable comedy aout two lost souls finding one another";
+      } else {
+        title = "";
+        image = '';
+        description = "";
+      }
+      document.querySelector("#answer").innerHTML = title;
+      document.querySelector("#image").src = image;
+      document.querySelector("#text").innerHTML = description;
+    }
+
+    function blame() {  //this one gives the result I want
+      var title;
+      var image;
+      var description;
+      if (document.querySelector("#indie").checked +
+          document.querySelector("#drama").checked +
+          document.querySelector("#romance").checked +
+          document.querySelector("#film").checked +
+          document.querySelector("#moody").checked +
+          document.querySelector("#steamy").checked) {
+          title = "Blame";
+          image = 'img/blame.jpg';
+          description = "a high school retelling of the crucible which will most definitiely leave you hot for teacher";
+        } else {
+          title = "";
+          image = '';
+          description = "";
+        }
+      document.querySelector("#answer").innerHTML = title;
+      document.querySelector("#image").src = image;
+      document.querySelector("#text").innerHTML = description;
+    }
+
+    function julieJulia() {  //this one gives the result I want
+      var title;
+      var image;
+      var description;
+      if (document.querySelector("#studio").checked +
+          document.querySelector("#drama").checked +
+          document.querySelector("#comedy").checked +
+          document.querySelector("#film").checked +
+          document.querySelector("#jolly").checked +
+          document.querySelector("#tame").checked) {
+          title = "Julie & Julia";
+          image = 'img/jule-and-julia.jpg';
+          description = "Salivate over a smorgosboard of French cuisine, and Chris being an adorable supportive boyfriend";
+        } else {
+          title = "";
+          image = '';
+          description = "";
+        }
+      document.querySelector("#answer").innerHTML = title;
+      document.querySelector("#image").src = image;
+      document.querySelector("#text").innerHTML = description;
+    }
+
+    function sharpObjects() {  //this one gives the result I want
+      var title;
+      var image;
+      var description;
+      if (document.querySelector("#studio").checked +
+          document.querySelector("#drama").checked +
+          document.querySelector("#angst").checked +
+          document.querySelector("#tv").checked +
+          document.querySelector("#jolly").checked +
+          document.querySelector("#steamy").checked) {
+          title = "Sharp Objects";
+          image = 'img/sharp-objects.jpg';
+          description = "Be frustrated for several episodes in the south, but enjoy cheeky detective Chris getting far too involved with suspect in the name of the case";
+        } else {
+          title = "";
+          image = '';
+          description = "";
+        }
+      document.querySelector("#answer").innerHTML = title;
+      document.querySelector("#image").src = image;
+      document.querySelector("#text").innerHTML = description;
+    }*/
+
+    function startAgain() {
+     var x = document.getElementById("start-over");
+     if (x.style.display === "none") {
+       x.style.display = "block";
+     } else {
+       x.style.display = "none";
+     }
+   }
+
+
+
+      /*function blame();
+      } else if (document.querySelector("#indie").checked +
+                 document.querySelector("#drama").checked +
+                 document.querySelector("#romance").checked +
+                 document.querySelector("#film").checked +
+                 document.querySelector("#moody").checked +
+                document.querySelector("#steamy").checked) {
+              title = "Blame";
+              image = 'img/blame.jpg';
+              description = "a high school retelling of the crucible which will most definitiely leave you hot for teacher";
+      } else if (document.querySelector("#indie").checked +
+                 document.querySelector("#drama").checked +
+                 document.querySelector("#comedy").checked +
+                 document.querySelector("#film").checked +
+                 document.querySelector("#jolly").checked +
+                 document.querySelector("#tame").checked) {
+              title = "Away We Go";
+              image = 'img/away-we-go.jpg';
+              description = "A cute film in which Chris eats a stack of pancakes with the biggets smile you've ever seen";
+      }
+      document.querySelector("#answer").innerHTML = title;
+      document.querySelector("#image").src = image;
+      document.querySelector("#text").innerHTML = description;
+
+    }
+
+    /*function calc() {
+      var a;
+      if (document.querySelector("#indie").checked) {
+        a = "Indie";
+      } else if (document.querySelector("#studio").checked) {
+        a = "Studio";
+      }
+      document.querySelector("#answer").innerHTML = a;
+    }
+
+    function options() {  //this one gives the result I want
+      var title;
+      var image;
+      var description;
+      if (document.querySelector("#studio").checked +
+          document.querySelector("#comedy").checked +
+          document.querySelector("#romance").checked +
+          document.querySelector("#tv").checked +
+          document.querySelector("#jolly").checked +
+          document.querySelector("#tame").checked) {
+        title = "the Mindy Project";
+        image = 'img/the-mindy-project.jpg'
+        description = "an adorable comedy aout two lost souls finding one another";
+      } else if (document.querySelector("#indie").checked) {
+        title = "The Sinner";
+      }
+      document.querySelector("#answer").innerHTML = title;
+      document.querySelector("#image").src = image;
+      document.querySelector("#text").innerHTML = description;
+    }*/
+
+    /*function options() {  //this one gives the result I want
+      var title;
+      var image;
+      var description;
+      if (document.querySelector("#studio").checked +
+          document.querySelector("#comedy").checked +
+          document.querySelector("#romance").checked +
+          document.querySelector("#tv").checked +
+          document.querySelector("#jolly").checked +
+          document.querySelector("#tame").checked) {
+        title = "the Mindy Project";
+        image = 'img/the-mindy-project.jpg';
+        description = "an adorable comedy aout two lost souls finding one another";
+      } else if (document.querySelector("#indie").checked +
+                 document.querySelector("#drama").checked +
+                 document.querySelector("#romance").checked +
+                 document.querySelector("#film").checked +
+                 document.querySelector("#moody").checked +
+                document.querySelector("#steamy").checked) {
+              title = "Blame";
+              image = 'img/blame.jpg';
+              description = "a high school retelling of the crucible which will most definitiely leave you hot for teacher";
+      } else if (document.querySelector("#indie").checked +
+                 document.querySelector("#drama").checked +
+                 document.querySelector("#comedy").checked +
+                 document.querySelector("#film").checked +
+                 document.querySelector("#jolly").checked +
+                 document.querySelector("#tame").checked) {
+              title = "Away We Go";
+              image = 'img/away-we-go.jpg';
+              description = "A cute film in which Chris eats a stack of pancakes with the biggets smile you've ever seen";
+      }
+      document.querySelector("#answer").innerHTML = title;
+      document.querySelector("#image").src = image;
+      document.querySelector("#text").innerHTML = description;
+
+    }
+
+
+
+/*
+    function answer1() {
+      var a;
+      if (document.querySelector("#indie").checked) {
+        a = 1;
+      } else if (document.querySelector("#studio").checked) {
+        a = 2;
+      }
+      console.log(a);
+    }
+
+    function answer2() {
+      var b;
+      if (document.querySelector("#romance").checked) {
+        b = 1;
+      } else if (document.querySelector("#drama").checked) {
+        b = 2;
+      } else if (document.querySelector("#angst").checked) {
+        b = 3;
+      } else if (document.querySelector("#comedy").checked) {
+        b = 4;
+      }
+      console.log(b);
+    }
+
+    function answer3() {
+      var c;
+      if (document.querySelector("#film").checked) {
+        c = 1;
+      } else if (document.querySelector("#tv").checked) {
+        c = 2;
+      }
+      console.log(c);
+    }
+
+    function answer4() {
+      var d;
+      if (document.querySelector("#moody").checked) {
+        d = 1;
+      } else if (document.querySelector("#jolly").checked) {
+        d = 2;
+      }
+      console.log(d);
+    }
+
+    function answer5() {
+      var e;
+      if (document.querySelector("#tame").checked) {
+        e = 1;
+      } else if (document.querySelector("#steamy").checked) {
+        e = 2;
+      }
+      console.log(e);
+    }
+
+      var x = parseInt(answer1());
+      var y = parseInt(answer2());
+      document.getElementById("demo").innerHTML = x + y;
+      console.log(x);
+
+
+    var x = 10;
+    var y = 5;
+    var z = x + y;
+    console.log(z);
+
+
+      /*
+
+      if (userResult >= 5) {
+        title = "the Mindy Project";
+        image = 'img/the-mindy-project.jpg';
+        description = "an adorable comedy about two lost souls finding one another";
+      } else if (userResult >= 10) {
+        title = "The Sinner";
+        image = 'img/the-mindy-project.jpg';
+        description = "an adorable comedy about two lost souls finding one another";
+      }
+      console.log(userResult);
+      document.querySelector("#answer").innerHTML = title;
+      document.querySelector("#image").src = image;
+      document.querySelector("#text").innerHTML = description;
+    }
+
+    /*
+    function showMindy() {
+      var title;
+      var image;
+      var description;
+      if
+    }
+
+    function showAnswer() {
+      var mindy = 10;
+
+      if (answer == >10) {}
+    }*/
+
+
+      /*var results = document.getElementById("form-results")
+      var title = document.getElementById("user-result");
+      var image = document.getElementById("watch-image-reveal");
+      var description = document.getElementById("suggestion-description");*/
+
+      /*function showMindy() {
+        var x = document.getElementById("form-results");
+        var resultTitle = document.getElementById("user-result");
+        var resultImage = document.getElementById("watch-image-reveal");
+        var resultDescription = document.getElementById("suggestion-description");
+        var descriptionText;
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          title = "The Mindy Project";
+          image = 'img/the-mindy-project.jpg';
+          description = "A hilarious rom-com series";
+        } else {
+        x.style.display = "none";
+      }
+        resultImage = image;
+        description
+      }*/
+      /*
+    function showMindy() {
+      var resultTitle = document.getElementById("user-result").innerHTML = "The Mindy Project";
+      var resultDescription = document.getElementById("suggestion-description").innerHTML = "hilarious rom com";
+      var image = document.getElementById("image-result");
+      image.src = "img/the-mindy-project.jpg";
+    }
+      /*
+
+    function showResults() {
+     var x = document.getElementById("form-results");
+     if (x.style.display === "none") {
+       x.style.display = "block";
+     } else {
+       x.style.display = "none";
+     }
+   };
+
+    function showMindy() {
+      var resultTitle = document.getElementById("user-result");
+      var resultImage = document.getElementById("watch-image-reveal");
+      var resultDescription = document.getElementById("suggestion-description");
+      var descriptionText;
+      var image;
+      var titleText;
+
+      if (x.style.display === "block") {
+        resultTitle = "The Mindy Project";
+        image = 'img/the-mindy-project.jpg';
+        resultDescription = "A hilarious rom-com series";
+      } else {
+        x.style.display = "none";
+      }
+        resultTitle.innerHTML = titleText;
+        resultDescription.innerText = descriptionText;
+        resultImage.src = image;
+      }
+    };*/
+
+      /*
+
+    var updateClock = function(){
+     var image = document.getElementById('watch-image-reveal');
+     var message = document.getElementById('suggestion-description');
+     var messageText;
+     var image = "img/the-mindy-project.jpg";
+
+     if (time == lunchTime){
+    image = "";
+      messageText = "Por qué no comer?";
+} else if (time == wakeUpTime){
+    image = "https://img.buzzfeed.com/buzzfeed-static/static/2018-08/21/13/asset/buzzfeed-prod-web-05/anigif_sub-buzz-9639-1534873105-1.gif?downsize=715:*&output-format=auto&output-quality=auto";
+      messageText = "Rise and shine!";
+
+
+     {
+      var x = document.getElementById("form-results");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }*/
+
+/* function displayResults()
+    var theMindyProject = 19;
+    var answer =
+
+    function showAnswer() {
+      var title = document.getElementById("user-result");
+      var image = document.getElementById("watch-image-reveal");
+      var description = document.getElementById("suggestion-description");
+      if (answer === 19) {
+        title = "The Mindy Project";
+        image = "img/the-mindy-project.jpeg";
+        description.innerHTML = "A hilarious rom com series"
+        } else {
+
+        }
+      }
+    }
+
+
+    function showResults() {
+
+    }
+
+    //on submit, show results
+    submitButton.addEventListener('click', showResults);
+
+
+
+    function userResult() {
+      var result = document.getElementById("userResult");
+      var answer = (result of each project category added together)
+      if (answer value ==== ???)
+        show this title
+        show this image
+        show this description
+
+      } else {
+
+      if (answer value ==== ???)
+        show this title
+        show this image
+        show this description
+
+        }
+    }*/
+    </script>
+
+  </body>
+</html>

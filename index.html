@@ -4,31 +4,30 @@
     <meta charset="utf-8">
     <title>Messina Generator</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,900;1,300&display=swap" rel="stylesheet">
     <script src="js/main.js"></script>
    </head>
 
   <body id="body">
+    <main>
     <header>
-      <h1>Messina Film/TV Generator</h1>
       <div class="header-intro">
+        <h1>Messina Film/TV Generator</h1>
         <h2>So you’d like to see a little Messina would ya?</h2>
-        <p>This Long Island native is a charming and diverse actor with the filmography to match. In case you’d like a little suggestion of where to start, pick from the options below for a tailored suggestion.
-  </p>
+        <p>This Long Island native is a charming and diverse actor with the filmography to match. In case you’d like a little suggestion of where to start, pick from the options below for a tailored suggestion.</p>
       </div>
     </header>
-
-    <main>
       <form>
 
-        <h3 id="option-header">Indie or Studio?</h3>
+        <!--<h3 id="option-header">Indie or Studio?</h3>
         <input type="radio" id="indie" name="project-type" value="indie">
         <label for="indie">Indie</label>
         <input type="radio" id="studio" name="project-type" value="studio">
-        <label for="studio">Studio</label>
+        <label for="studio">Studio</label>-->
 
         <h3 id="option-header">Pick a genre</h3>
-        <input type="radio" id="romance" name="genre" value="romance">
-        <label for="romance">Romance</label>
+        <!--<input type="radio" id="romance" name="genre" value="romance">
+        <label for="romance">Romance</label>-->
         <input type="radio" id="drama" name="genre" value="drama">
         <label for="drama">Drama</label>
         <input type="radio" id="angst" name="genre" value="angst">
@@ -55,15 +54,17 @@
         <label for="steamy">Steamy</label>
 
         <div class="">
-          <button type="button" onclick="projects();startAgain();" name="button">Submit</button>
+          <button id="submit" type="button" onclick="projects();startAgain();" name="button">Submit</button>
         </div>
+
+      </form>
 
         <div id="result">
           <div id="answer"></div>
           <div id="secondary-answer"></div>
           <img id="image" src="" alt="">
           <div id="text"></div>
-          <a id="trailer" href="" target="_blank" ><img src="img/youtube-logo.png"></a>
+          <a id="trailer" href="#" target="_blank" ><img src="img/youtube-logo.png"></a>
         </div>
 
         <div id="start-over" style="display:none;">

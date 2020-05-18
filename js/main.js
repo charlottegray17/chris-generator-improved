@@ -5,18 +5,18 @@ function projects() {  //this one gives the result I want
   var description;
   var trailer;
   var message = "If you're not a fan of your Messina recommendation (doubtful), please click below to start again."
-  if (document.querySelector("#studio").checked &&
+  if (/*document.querySelector("#studio").checked &&*/
       document.querySelector("#comedy").checked &&
       document.querySelector("#tv").checked &&
       document.querySelector("#jolly").checked &&
       document.querySelector("#tame").checked) {
-    title = "the Mindy Project";
+    title = "The Mindy Project";
     title2 = "2012";
     image = 'img/the-mindy-project.jpg';
-    description = "an adorable comedy aout two lost souls finding one another";
+    description = "an adorable comedy about two lost souls finding one another";
     trailer = 'https://www.youtube.com/watch?v=btnPlaf078E';
   } else if
-     (document.querySelector("#indie").checked &&
+     (/*document.querySelector("#indie").checked &&*/
       document.querySelector("#angst").checked &&
       document.querySelector("#film").checked &&
       document.querySelector("#moody").checked &&
@@ -27,7 +27,7 @@ function projects() {  //this one gives the result I want
       description = "a high school retelling of the crucible which will most definitiely leave you hot for teacher";
       trailer = 'https://www.youtube.com/watch?v=xqQ_ZAuPH8g';
   } else if
-    (document.querySelector("#studio").checked &&
+    (/*document.querySelector("#studio").checked &&*/
      document.querySelector("#comedy").checked &&
      document.querySelector("#film").checked &&
      document.querySelector("#jolly").checked &&
@@ -38,7 +38,7 @@ function projects() {  //this one gives the result I want
      description = "Salivate over a smorgosboard of French cuisine, and Chris being an adorable supportive boyfriend";
      trailer = 'https://www.youtube.com/watch?v=ozRK7VXQl-k';
  } else if
-    (document.querySelector("#studio").checked &&
+    (/*document.querySelector("#studio").checked &&*/
      document.querySelector("#drama").checked &&
      document.querySelector("#tv").checked &&
      document.querySelector("#jolly").checked &&
@@ -49,7 +49,7 @@ function projects() {  //this one gives the result I want
      description = "Be frustrated for several episodes in the south, but enjoy cheeky detective Chris getting far too involved with suspect in the name of the case";
      trailer = 'https://www.youtube.com/watch?v=_v8Fm3O8cp0';
  } else if
-    (document.querySelector("#indie").checked &&
+    (/*document.querySelector("#indie").checked &&*/
      document.querySelector("#drama").checked &&
      document.querySelector("#film").checked &&
      document.querySelector("#moody").checked &&
@@ -60,7 +60,7 @@ function projects() {  //this one gives the result I want
      description = "Watch a young, bearded and very nearly married Chris, stalk someone and wish he was stalking you";
      trailer = 'https://www.youtube.com/watch?v=s9_x3ytUkQU';
  } else if
-    (document.querySelector("#indie").checked &&
+    (/*document.querySelector("#indie").checked &&*/
      document.querySelector("#drama").checked &&
      document.querySelector("#film").checked &&
      document.querySelector("#jolly").checked &&
@@ -71,8 +71,8 @@ function projects() {  //this one gives the result I want
      description = "Chris is a perfect sidekick is this kinda dark rom com about a dream girl come to life";
      trailer = 'https://www.youtube.com/watch?v=xb3_AE-UinY';
  } else if
-    (document.querySelector("#indie").checked &&
-     document.querySelector("#romance").checked &&
+    (/*document.querySelector("#indie").checked &&*/
+     document.querySelector("#drama").checked &&
      document.querySelector("#film").checked &&
      document.querySelector("#jolly").checked &&
      document.querySelector("#tame").checked) {
@@ -82,7 +82,7 @@ function projects() {  //this one gives the result I want
      description = "Chris is in love and it's pretty darn cute, until of course - its starts to spiral";
      trailer = 'https://www.youtube.com/watch?v=oqF9eJp0o0M';
  } else if
-    (document.querySelector("#indie").checked &&
+    (/*document.querySelector("#indie").checked &&*/
      document.querySelector("#drama").checked &&
      document.querySelector("#film").checked &&
      document.querySelector("#jolly").checked &&
@@ -93,7 +93,7 @@ function projects() {  //this one gives the result I want
      description = "Chris is a Science Teacher who has the hots for fellow teacher at school who is pretty, awkward and adorable";
      trailer = 'https://www.youtube.com/watch?v=4x2RzV1UrW8';
  } else if
-    (document.querySelector("#indie").checked &&
+    (/*document.querySelector("#indie").checked &&*/
      document.querySelector("#angst").checked &&
      document.querySelector("#film").checked &&
      document.querySelector("#moody").checked &&
@@ -103,7 +103,7 @@ function projects() {  //this one gives the result I want
      description = "The mini bar bill is almost too much to bare, for this couple. Engulfed in an extra marital affair they meet when they can in hotel rooms.";
      trailer = "https://www.youtube.com/watch?v=bSN5Hvh8bts";
  } else if
-    (document.querySelector("#studio").checked &&
+    (/*document.querySelector("#studio").checked &&*/
      document.querySelector("#drama").checked &&
      document.querySelector("#film").checked &&
      document.querySelector("#moody").checked &&
@@ -114,7 +114,7 @@ function projects() {  //this one gives the result I want
      description = "I don't recall much of this film, becuase I genuinely don't think Chris is in it much but it won a lot of awards so there's that";
      trailer = "https://www.youtube.com/watch?v=JW3WfSFgrVY";
 } else if
-    (document.querySelector("#studio").checked &&
+    (/*document.querySelector("#studio").checked &&*/
      document.querySelector("#drama").checked &&
      document.querySelector("#tv").checked &&
      document.querySelector("#moody").checked &&
@@ -125,7 +125,7 @@ function projects() {  //this one gives the result I want
      description = "Chris is moody mofo in this one. Will shake you to your core. CAUTION: You may also become addicted to 'Damages'.";
      trailer = "https://www.youtube.com/watch?v=k0ql9NG_ooc";
 } else if
-   (document.querySelector("#studio").checked &&
+   (/*document.querySelector("#studio").checked &&*/
     document.querySelector("#drama").checked &&
     document.querySelector("#tv").checked &&
     document.querySelector("#moody").checked &&
@@ -136,7 +136,7 @@ function projects() {  //this one gives the result I want
     description = "Chris is a snarky well dressed mumma's boy in this fast paced newsroom comedy. Great all-round cast here that you'll surely full in love with.";
     trailer = "https://www.youtube.com/watch?v=lB944ODCK24";
 } else if
-   (document.querySelector("#studio").checked &&
+   (/*document.querySelector("#studio").checked &&*/
     document.querySelector("#drama").checked &&
     document.querySelector("#tv").checked &&
     document.querySelector("#moody").checked &&
@@ -147,7 +147,7 @@ function projects() {  //this one gives the result I want
     description = "Chris is a Creepy mcCreeperson trying to be Godly, and dragging his old pal Jamie up/down with him.";
     trailer = "https://www.youtube.com/watch?v=c0G7U-A8Qh8";
 } else if
-   (document.querySelector("#studio").checked &&
+   (/*document.querySelector("#studio").checked &&*/
     document.querySelector("#drama").checked &&
     document.querySelector("#film").checked &&
     document.querySelector("#jolly").checked &&
@@ -158,11 +158,11 @@ function projects() {  //this one gives the result I want
     description = "Psyhco NEVER - and I mean never - looked so good";
     trailer = "https://www.youtube.com/watch?v=kGM4uYZzfu0";
 } else if
-   (document.querySelector("#studio").checked &&
+   (/*document.querySelector("#studio").checked &&*/
     document.querySelector("#drama").checked &&
     document.querySelector("#film").checked &&
     document.querySelector("#jolly").checked &&
-    document.querySelector("#steamy").checked) {
+    document.querySelector("#tame").checked) {
     title = "Away We Go";
     image = 'img/away-we-go.jpg';
     description = "Chris at one point eats a stack of pancackes with the happiest grin anyone ever grinned. Worth watching just for that.";

@@ -6,29 +6,97 @@
 body {
   width: 100%;
   margin: 0 auto;
+  background-color: powderblue;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
 }
 
-header,
+#body {
+  display: flex;
+  justify-content: center;
+}
+
 main {
-    padding: 20px;
+  background-color: #dcf4f7;
+  border: 3px white solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  width: 800px;
+  padding: 20px;
+}
+
+
+header h1 {
+  text-transform: uppercase;
 }
 
 .header-intro {
   padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-intro h1 {
+  padding-bottom: 10px;
+  text-align: justify;
+  font-weight: 700;
+}
+
+.header-intro h2 {
+  padding-top: 10px;
+  text-align: justify;
+  font-weight: 500;
+  color: white;
+  background-color: #45b4ba;
+  border-radius: 10px;
+  padding: 13px;
+}
+
+.header-intro p {
+  padding-top: 10px;
+  width: 750px;
+  text-align: justify;
+}
+
+form,
+#result,
+#start-over,
+footer {
+  margin-left: 25px;
 }
 
 h3 {
   margin: 30px 0 10px 0px;
 }
 
-input {
-}
-
 button {
   margin: 40px 0 10px 0;
 }
 
-#form-results {
-  background-color: PowderBlue;
+#submit {
   padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+#result {
+  display: flex;
+  flex-direction: column;
+}
+
+#result img {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+}
+
+#trailer img{
+  width: 50px;
+  margin-bottom: 10px; 
 }
